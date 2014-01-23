@@ -1,0 +1,10 @@
+<h1>Sign In</h1>
+
+<%= simple_form_for :session, url: session_path do |form| %>
+
+	<%= form.input :username %>
+	<%= form.input :password %>
+
+	<%= form.button :submit, "Sign In" %> 
+
+<% end %>
