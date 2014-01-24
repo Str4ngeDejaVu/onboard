@@ -73,6 +73,6 @@ class RoomsController < ApplicationController
   # shortcut for white listing
   def room_params
   	params.require(:room).permit(
-  		:title, :address, :description, :max_guests, :bedrooms, :price)
+  		:title, :address, :description, :max_guests, :bedrooms, :price, :image)
   end
 end
