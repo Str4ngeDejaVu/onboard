@@ -17,4 +17,15 @@ class ApplicationController < ActionController::Base
   # aswell as our controllers
   helper_method :current_user
 
+  # let's add in an action to make anyone logged out
+  # go to the sign up page
+
+  def make_sure_logged_in
+    
+    if current_user.nil?
+      flash[:error] = "You need to be signed up"
+      redirect_to new_user_path
+    end
+  end
+
 end
